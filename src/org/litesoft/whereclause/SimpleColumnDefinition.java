@@ -5,7 +5,7 @@ package org.litesoft.whereclause;
  * An interface that the <b>WhereClause</b>s use to support the formatting
  * generated in the toString() and toSQL() methods.<p>
  * <a href="../../Licence.txt">Licence</a><br>
- * <p/>
+ * <p>
  * Exceptions: All problems caught when the parameter(s) are checked (as
  * indicated/implied in the @param tags) will generate an IllegalArgumentException,
  * and means the API user has a problem.  If a NullPointerException (or some
@@ -22,7 +22,7 @@ package org.litesoft.whereclause;
 public interface SimpleColumnDefinition {
     /**
      * Accessor for the logical name of this Column.<p>
-     * <p/>
+     * <p>
      * While this name can be equal to the ColumnName, it does not need
      * to be, it could be the name of an Object's attribute that is mapped
      * to this column by an OR mapper.  In any case, this name is what
@@ -33,11 +33,11 @@ public interface SimpleColumnDefinition {
      *
      * @see WhereClause#toString()
      */
-    public String getName();
+    String getName();
 
     /**
      * Accessor for the <b>actual</b> SQL Column Name.<p>
-     * <p/>
+     * <p>
      * This ColumnName MUST match that declared in the SQL Table Meta-data,
      * as it is used/displayed by the specific <b>WhereClause</b>'s toSQL()
      * method.<p>
@@ -46,22 +46,22 @@ public interface SimpleColumnDefinition {
      *
      * @see WhereClause#toSQL()
      */
-    public String getColumnName();
+    String getColumnName();
 
     /**
      * Return <code>true</code> if the SearchColumn should be a seperate Column.<p>
-     * <p/>
+     * <p>
      *
      * @see WhereClause#toSQL()
      */
-    public boolean hasSearchColumn();
+    boolean hasSearchColumn();
 
     /**
      * Accessor for the SQL Column Name that should <b>actually</b> be used for Searching.<p>
-     * <p/>
+     * <p>
      * Normally this has the same value as <code>getColumnName</code>.  If it doesn't, then it
      * indicates that there is a secondary column that needs to be maintained just for searching.<p>
-     * <p/>
+     * <p>
      * This ColumnName MUST match that declared in the SQL Table Meta-data,
      * as it is used/displayed by the specific <b>WhereClause</b>'s toSQL()
      * method.<p>
@@ -70,11 +70,11 @@ public interface SimpleColumnDefinition {
      *
      * @see WhereClause#toSQL()
      */
-    public String getSearchColumnName();
+    String getSearchColumnName();
 
     /**
      * Accessor for the <i>Java</i> Class <i>type</i> of the SQL Column.<p>
-     * <p/>
+     * <p>
      * The primary purpose of this method (within the <b>WhereClause</b>
      * infrastructure) is to indicate (to the toString() and toSQL() methods)
      * how the values should be formatted/displayed.  (e.g. that <b>String</b>s
@@ -86,5 +86,5 @@ public interface SimpleColumnDefinition {
      * @see WhereClause#toSQL()
      * @see WhereClause#toString()
      */
-    public Class getColumnType();
+    Class getColumnType();
 }
