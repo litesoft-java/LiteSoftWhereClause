@@ -4,19 +4,19 @@ package org.litesoft.whereclause.nonpublic;
 /**
  * An interface that a WhereClause implements if it supports Notability.<p>
  * <a href="../../../Licence.txt">Licence</a><br>
- * <p/>
+ * <p>
  * A WhereClause is Notable, if it can adjust its internal representation
  * to support both a <i>regular</i> and a <i>NOT</i> mode.  When the
  * WhereClauseFactory is asked to <i>NOT</i> a WhereClause it does one
  * of two things:
- * <p/>
+ * <p>
  * <ul>             Wrap the WhereClause in a <b>NOT</b> expression, or</ul>
- * <p/>
+ * <p>
  * <ul>             Tell the WhereClause to toggle (switchNot) it's NOT mode.</ul>
- * <p/>
+ * <p>
  * The determining factor is <i>if</i> the WhereClause implements this
  * interface.<p>
- * <p/>
+ * <p>
  * Exceptions: All problems caught when the parameter(s) are checked (as
  * indicated/implied in the @param tags) will generate an IllegalArgumentException,
  * and means the API user has a problem.  If a NullPointerException (or some
@@ -36,10 +36,10 @@ public interface WhereClauseNotable {
      *
      * @return if this WhereClause is currently in the <b>NOT</b> mode.
      */
-    public boolean isNot();
+    boolean isNot();
 
     /**
      * Toggle (or switch) this WhereClause's <b>NOT</b> mode.<p>
      */
-    public void switchNot();
+    void switchNot();
 }

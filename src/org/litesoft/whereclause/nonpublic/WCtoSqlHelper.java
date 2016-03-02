@@ -1,7 +1,8 @@
 // This Source Code is in the Public Domain per: http://unlicense.org
 package org.litesoft.whereclause.nonpublic;
 
-import org.litesoft.whereclause.*;
+import org.litesoft.whereclause.SingleColumnSelect;
+import org.litesoft.whereclause.WhereClause;
 
 /**
  * <a href="../../../Licence.txt">Licence</a><br>
@@ -17,7 +18,7 @@ public interface WCtoSqlHelper {
      *
      * @return true means do NOT continue processing this node and its children, false means continue normally
      */
-    public boolean preRender( WhereClause pWC, StringBuilder pSB );
+    boolean preRender( WhereClause pWC, StringBuilder pSB );
 
     /**
      * If the preRender() method returned false, then this method is called in case additional (post regular
@@ -26,7 +27,7 @@ public interface WCtoSqlHelper {
      * @param pWC the WhereClause to be 'Helped'
      * @param pSB the String being built
      */
-    public void postRender( WhereClause pWC, StringBuilder pSB );
+    void postRender( WhereClause pWC, StringBuilder pSB );
 
     /**
      * This method is called before the regular toSqlHelper() method executes.  It may either augment
@@ -38,7 +39,7 @@ public interface WCtoSqlHelper {
      *
      * @return true means do NOT continue processing this node and its children, false means continue normally
      */
-    public boolean preRender( SingleColumnSelect pSCS, StringBuilder pSB );
+    boolean preRender( SingleColumnSelect pSCS, StringBuilder pSB );
 
     /**
      * If the preRender() method returned false, then this method is called in case additional (post regular
@@ -47,9 +48,9 @@ public interface WCtoSqlHelper {
      * @param pSCS the SingleColumnSelect to be 'Helped'
      * @param pSB  the String being built
      */
-    public void postRender( SingleColumnSelect pSCS, StringBuilder pSB );
+    void postRender( SingleColumnSelect pSCS, StringBuilder pSB );
 
-    public static final WCtoSqlHelper NULL = new WCtoSqlHelper() {
+    WCtoSqlHelper NULL = new WCtoSqlHelper() {
         @Override
         public boolean preRender( WhereClause pWC, StringBuilder pSB ) {
             return false;

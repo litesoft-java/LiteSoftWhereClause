@@ -1,9 +1,10 @@
 // This Source Code is in the Public Domain per: http://unlicense.org
 package org.litesoft.whereclause;
 
-import org.litesoft.whereclause.nonpublic.*;
+import org.litesoft.whereclause.nonpublic.WhereClauseToSQLable;
 
-import java.sql.*;
+import java.sql.Date;
+import java.sql.Timestamp;
 
 /**
  * Utility class with a number of methods to help with the formatting of <i>WhereClause</i>s.<p>

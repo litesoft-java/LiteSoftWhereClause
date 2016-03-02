@@ -1,9 +1,27 @@
 // This Source Code is in the Public Domain per: http://unlicense.org
 package org.litesoft.whereclause;
 
-import org.litesoft.whereclause.nonpublic.*;
+import org.litesoft.whereclause.nonpublic.AbstractWhereClauseAssociativeList;
+import org.litesoft.whereclause.nonpublic.AbstractWhereClauseColumnAndLikeValue;
+import org.litesoft.whereclause.nonpublic.AbstractWhereClauseColumnAndLikeValues;
+import org.litesoft.whereclause.nonpublic.AbstractWhereClauseColumnAndTwoValues;
+import org.litesoft.whereclause.nonpublic.AbstractWhereClauseColumnAndTypeTo;
+import org.litesoft.whereclause.nonpublic.AbstractWhereClauseColumnAndValue;
+import org.litesoft.whereclause.nonpublic.AbstractWhereClauseColumnAnd_N_Values;
+import org.litesoft.whereclause.nonpublic.AbstractWhereClauseColumnIsIn;
+import org.litesoft.whereclause.nonpublic.AbstractWhereClauseTF;
+import org.litesoft.whereclause.nonpublic.AbstractWhereClauseWrapper;
+import org.litesoft.whereclause.nonpublic.IllegalArgument;
+import org.litesoft.whereclause.nonpublic.WCtoSqlHelper;
+import org.litesoft.whereclause.nonpublic.WhereClauseNotable;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * A Factory to generate a representation of a SQL <i>WHERE</i> clause.<p>
@@ -709,7 +727,7 @@ public class WhereClauseFactory {
         {
             return pValues;
         }
-        List<String> zParts = new ArrayList<String>( Arrays.asList( pValues ) );
+        List<String> zParts = new ArrayList<>( Arrays.asList( pValues ) );
         // i is Last empty
         zParts.remove( i );
         while ( --i > 0 ) {
@@ -778,7 +796,7 @@ public class WhereClauseFactory {
     }
 
     private WhereClause LLisAnyFrom( SimpleColumnDefinition pColumnDefinition, Collection<?> pValues ) {
-        Set<Object> zSet = new LinkedHashSet<Object>( pValues );
+        Set<Object> zSet = new LinkedHashSet<>( pValues );
         boolean hasNull = false;
         if ( zSet.contains( null ) ) {
             hasNull = true;

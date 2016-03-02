@@ -1,8 +1,8 @@
 // This Source Code is in the Public Domain per: http://unlicense.org
 package org.litesoft.whereclause.nonpublic;
 
-import org.litesoft.whereclause.*;
-import org.litesoft.whereclause.nonpublic.*;
+import org.litesoft.whereclause.WhereClause;
+import org.litesoft.whereclause.WhereClauseType;
 
 /**
  * An abstract representation of a wrapped SQL <i>WHERE</i> clause (like NOT).<p>

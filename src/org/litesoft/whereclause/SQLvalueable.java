@@ -2,5 +2,5 @@
 package org.litesoft.whereclause;
 
 public interface SQLvalueable<T> {
-    public T toSQLvalue();
+    T toSQLvalue();
 }

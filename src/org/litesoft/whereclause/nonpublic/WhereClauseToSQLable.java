@@ -5,5 +5,5 @@ package org.litesoft.whereclause.nonpublic;
  * <a href="../../../Licence.txt">Licence</a><br>
  */
 public interface WhereClauseToSQLable {
-    public Object toSqlValueForEquals();
+    Object toSqlValueForEquals();
 }

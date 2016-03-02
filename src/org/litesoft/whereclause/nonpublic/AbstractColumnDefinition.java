@@ -1,7 +1,8 @@
 // This Source Code is in the Public Domain per: http://unlicense.org
 package org.litesoft.whereclause.nonpublic;
 
-import org.litesoft.whereclause.*;
+import org.litesoft.whereclause.SimpleColumnDefinition;
+import org.litesoft.whereclause.WhereClause;
 
 /**
  * An abstract helper class to make implementing SimpleColumnDefinition simpler.<p>

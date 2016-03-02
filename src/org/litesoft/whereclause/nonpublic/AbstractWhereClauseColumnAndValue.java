@@ -1,7 +1,10 @@
 // This Source Code is in the Public Domain per: http://unlicense.org
 package org.litesoft.whereclause.nonpublic;
 
-import org.litesoft.whereclause.*;
+import org.litesoft.whereclause.SimpleColumnDefinition;
+import org.litesoft.whereclause.WhereClause;
+import org.litesoft.whereclause.WhereClauseColumnSupport;
+import org.litesoft.whereclause.WhereClauseType;
 
 /**
  * An abstract representation of a SQL <i>WHERE</i> clause that supports a

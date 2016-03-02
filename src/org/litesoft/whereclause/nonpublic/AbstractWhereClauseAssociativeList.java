@@ -1,9 +1,13 @@
 // This Source Code is in the Public Domain per: http://unlicense.org
 package org.litesoft.whereclause.nonpublic;
 
-import org.litesoft.whereclause.*;
+import org.litesoft.whereclause.WhereClause;
+import org.litesoft.whereclause.WhereClauseType;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * An abstract representation of an associative list of SQL <i>WHERE</i> clauses.<p>
@@ -48,7 +52,7 @@ public abstract class AbstractWhereClauseAssociativeList extends WhereClause {
     protected AbstractWhereClauseAssociativeList( WhereClauseType pType, WhereClause pWhereClause1, WhereClause pWhereClause2 ) {
         super( pType );
 
-        List<WhereClause> list = new ArrayList<WhereClause>();
+        List<WhereClause> list = new ArrayList<>();
         addWhereClause( list, pWhereClause1 );
         addWhereClause( list, pWhereClause2 );
         mWhereClauseList = Collections.unmodifiableList( list );

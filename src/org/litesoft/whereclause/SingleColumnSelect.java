@@ -1,7 +1,8 @@
 // This Source Code is in the Public Domain per: http://unlicense.org
 package org.litesoft.whereclause;
 
-import org.litesoft.whereclause.nonpublic.*;
+import org.litesoft.whereclause.nonpublic.IllegalArgument;
+import org.litesoft.whereclause.nonpublic.WCtoSqlHelper;
 
 /**
  * A class that can represent a SQL Single Column Select statement.<p>

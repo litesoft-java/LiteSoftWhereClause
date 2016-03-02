@@ -1,7 +1,7 @@
 // This Source Code is in the Public Domain per: http://unlicense.org
 package org.litesoft.whereclause;
 
-import org.litesoft.whereclause.nonpublic.*;
+import org.litesoft.whereclause.nonpublic.WCtoSqlHelper;
 
 /**
  * An abstract representation of a SQL <i>WHERE</i> clause.<p>
